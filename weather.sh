@@ -10,7 +10,7 @@ apikey="0ae09eed4f3c0267cb6e6ed7e1cdda8f"
 city="xian"
 
 usage(){
-	echo "使用方法：weather [城市汉字名称或拼音]"
+	echo "使用方法：./weather.sh [城市汉字名称或拼音]"
 	echo "默认城市：西安"
 }
 
