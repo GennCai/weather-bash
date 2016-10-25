@@ -28,9 +28,14 @@ fi
 
 weather=`curl --silent --header "apikey:$apikey" -G -d "city=$city" $url`
 
+if [[ `echo $weather | grep "unknown city"` ]]; then
+	echo "无效的城市名称"
+	exit
+fi
+
 wTxt=`echo $weather | json | grep "now/cond/txt"`
 
 wTxt=`echo ${wTxt##/H*g}`
 
-echo "今天天气：$wTxt"
+echo "现在天气：$wTxt"
 
